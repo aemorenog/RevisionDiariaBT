@@ -86,12 +86,26 @@ namespace RevisionDiariaBT
         [FindsBy(How = How.LinkText, Using = "Ver todos los descuentos")]
         public IWebElement LinkMundoDescuentos { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///<summary>
+        ///Explorar Viajes
+        ///</summary>
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[2]/article[1]/div[2]/a/h4")]
+        public IWebElement CategoriaChile { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[2]/article[2]/div[2]/a/h4")]
+        public IWebElement CategoriaSudamérica { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[2]/article[3]/div[2]/a/h4")]
+        public IWebElement CategoriaMexicoyCaribe { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[2]/article[4]/div[2]/a/h4")]
+        public IWebElement CategoriaNorteamérica { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[2]/article[5]/div[2]/a/h4")]
+        public IWebElement CategoriaEuropayLejanos { get; set; }
 
 
     }
 
-
-}
+ }
