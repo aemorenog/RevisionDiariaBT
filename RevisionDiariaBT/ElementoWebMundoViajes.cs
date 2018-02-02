@@ -15,6 +15,31 @@ namespace RevisionDiariaBT
             PageFactory.InitElements(PropiedadColeccionDriver.driver, this);
         }
 
+
+        ///<summary>
+        ///Botóne Next and Prev
+        /// </summary>
+
+        [FindsBy(How = How.ClassName, Using = "flex-next")]
+        public IWebElement btnNetxMundoViajes { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "flex-prev")]
+        public IWebElement btnPrevMundoViajes { get; set; }
+
+        ///<summary>
+        ///Botones debajo de cada imagen carrusel Mundo Viajes
+        /// </summary>
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/article/div[1]/ol/li[1]/a")]
+        public IWebElement btnUnoCarrusel { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/article/div[1]/ol/li[2]/a")]
+        public IWebElement btnDosCarrusel { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/article/div[1]/ol/li[3]/a")]
+        public IWebElement btnTresCarrusel { get; set; }
+
+
         ///<summary>
         /// Carrusel Viajes
         /// </summary>
