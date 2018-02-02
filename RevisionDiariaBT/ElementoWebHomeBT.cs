@@ -17,7 +17,7 @@ namespace RevisionDiariaBT
 
 
         /// <summary>
-        /// Sección Carrusel
+        /// Botones Anterior y Siguiente Carrusel Home Beneficios
         /// </summary>
 
         [FindsBy(How = How.ClassName, Using = "bx-next")]
@@ -25,6 +25,10 @@ namespace RevisionDiariaBT
 
         [FindsBy(How = How.ClassName, Using = "bx-prev")]
         public IWebElement btnAnteriorCarrusel { get; set; }
+
+        /// <summary>
+        /// Imagenes Carrusel Home Beneficios
+        /// </summary>
 
         [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[2]/a/img")]
         public IWebElement PrimerImagenCarrusel { get; set; }
@@ -41,6 +45,35 @@ namespace RevisionDiariaBT
         [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[6]/a/img")]
         public IWebElement QuintaImagenCarrusel { get; set; }
 
+        ///<summary>
+        ///Botones circulares Carrusel Home
+        /// </summary>
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[1]/a")]
+        public IWebElement btnCircularCarruselUno { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/a")]
+        public IWebElement btnCircularCarruselDos { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[3]/a")]
+        public IWebElement btnCircularCarruselTres { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[4]/a")]
+        public IWebElement btnCircularCarruselCuatro { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[5]/a")]
+        public IWebElement btnCircularCarruselQuinto { get; set; }
+
+        ///<summary>
+        /// Botones Calugas Home
+        /// </summary>
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/button[2]")]
+        public IWebElement btnCalugasNext { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/button[1]")]
+        public IWebElement btnCalugaPrev { get; set; }
+        
         ///<summary>
         /// Menú Ingreso de Mundo Viajes
         /// </summary>
