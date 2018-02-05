@@ -73,7 +73,7 @@ namespace RevisionDiariaBT
 
         [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/button[1]")]
         public IWebElement btnCalugaPrev { get; set; }
-        
+
         ///<summary>
         /// Menú Ingreso de Mundo Viajes
         /// </summary>
@@ -138,7 +138,39 @@ namespace RevisionDiariaBT
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[2]/article[5]/div[2]/a/h4")]
         public IWebElement CategoriaEuropayLejanos { get; set; }
 
+        /// <summary>
+        /// Ingreso de Enlace de Mundos BT
+        /// </summary>
 
+        public void IngresarEnlaceMundoViajes()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            LinkMundoViajes.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+        }
+
+        public void IngresarEnlaceMundoTienda()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            LinkMundoTienda.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+        }
+
+        public void IngresarEnlaceMundoDescuentos()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            LinkMundoDescuentos.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+        }
     }
 
  }
