@@ -80,7 +80,7 @@ namespace RevisionDiariaBT
         }
 
         [Test]
-        public void ValidarPrimeraImagenCarrusel()
+        public void ValidarImagenesCarruselBT()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
