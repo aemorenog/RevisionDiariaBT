@@ -20,48 +20,48 @@ namespace RevisionDiariaBT
         /// Botones Anterior y Siguiente Carrusel Home Beneficios
         /// </summary>
 
-        [FindsBy(How = How.ClassName, Using = "bx-next")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[2]/div[2]/a[2]")]
         public IWebElement btnSiguienteCarrusel { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "bx-prev")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[2]/div[2]/a[1]")]
         public IWebElement btnAnteriorCarrusel { get; set; }
 
         /// <summary>
         /// Imagenes Carrusel Home Beneficios
         /// </summary>
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[2]/a/img")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[2]/a/img")]
         public IWebElement PrimerImagenCarrusel { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[3]/a/img")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[3]/a/img")]
         public IWebElement SegundaImagenCarrusel { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[4]/a/img")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[4]/a/img")]
         public IWebElement TerceraImagenCarrusel { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[5]/a/img")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[5]/a/img")]
         public IWebElement CuartaImagenCarrusel { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[6]/a/img")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/ul/li[6]/a/img")]
         public IWebElement QuintaImagenCarrusel { get; set; }
 
         ///<summary>
         ///Botones circulares Carrusel Home
         /// </summary>
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[1]/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[1]/a")]
         public IWebElement btnCircularCarruselUno { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/a")]
         public IWebElement btnCircularCarruselDos { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[3]/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[3]/a")]
         public IWebElement btnCircularCarruselTres { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[4]/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[4]/a")]
         public IWebElement btnCircularCarruselCuatro { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[5]/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[5]/a")]
         public IWebElement btnCircularCarruselQuinto { get; set; }
 
         ///<summary>
@@ -170,6 +170,52 @@ namespace RevisionDiariaBT
 
             System.Threading.Thread.Sleep(2000);
 
+        }
+
+        ///<summary>
+        /// Validar Carrusel BT
+        /// </summary>
+
+        public void BtnNextCarrusel()
+        {
+            System.Threading.Thread.Sleep(300);
+
+            btnSiguienteCarrusel.Click();
+
+            System.Threading.Thread.Sleep(300);
+
+            btnSiguienteCarrusel.Click();
+
+            System.Threading.Thread.Sleep(300);
+
+            btnSiguienteCarrusel.Click();
+
+            System.Threading.Thread.Sleep(300);
+        
+            btnSiguienteCarrusel.Click();
+
+            System.Threading.Thread.Sleep(300);
+
+        }
+
+        public void GetPrimeraImagenCarrusel()
+        {
+            PrimerImagenCarrusel.Click();
+        }
+
+        public void GetSegundaImagenCarrusel()
+        {
+            SegundaImagenCarrusel.Click();
+        }
+
+        public void GetTerceraImagenCarrusel()
+        {
+            TerceraImagenCarrusel.Click();
+        }
+
+        public void GetCuartaImagenCarrusel()
+        {
+            CuartaImagenCarrusel.Click();
         }
     }
 
