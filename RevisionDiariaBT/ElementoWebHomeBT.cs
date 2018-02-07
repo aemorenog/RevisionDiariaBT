@@ -48,7 +48,7 @@ namespace RevisionDiariaBT
         ///<summary>
         ///Botones circulares Carrusel Home
         /// </summary>
-
+        
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[1]/a")]
         public IWebElement btnCircularCarruselUno { get; set; }
 
@@ -137,6 +137,54 @@ namespace RevisionDiariaBT
 
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[2]/article[5]/div[2]/a/h4")]
         public IWebElement CategoriaEuropayLejanos { get; set; }
+
+
+        ///<summary>
+        /// Botones Next y Prev Carrusel Home BT
+        /// </summary>
+        
+        public void BtnNextPrevCarruselHomeBT()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            btnSiguienteCarrusel.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            btnAnteriorCarrusel.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+        }
+       
+        ///<summary>
+        /// Validar botones o Carrusel Home BT
+        /// </summary>
+        public void BtnSliderOCarruselHomeBT()
+        {
+            System.Threading.Thread.Sleep(1000);
+
+            btnCircularCarruselUno.Click();
+
+            System.Threading.Thread.Sleep(1500);
+
+            btnCircularCarruselDos.Click();
+
+            System.Threading.Thread.Sleep(1000);
+
+            btnCircularCarruselTres.Click();
+
+            System.Threading.Thread.Sleep(1000);
+
+            btnCircularCarruselCuatro.Click();
+
+            System.Threading.Thread.Sleep(1000);
+
+            QuintaImagenCarrusel.Click();
+
+            System.Threading.Thread.Sleep(3000);
+        }
+
 
         /// <summary>
         /// Ingreso de Enlace de Mundos BT

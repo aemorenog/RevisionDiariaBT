@@ -34,6 +34,46 @@ namespace RevisionDiariaBT
         }
 
 
+        ///<summary>
+        /// Validar Carrusel Automatico
+        /// </summary>
+        /// 
+        [Test]
+        public void WebHome_001_Validar_Funcionalidad_Slider_HomeBT_Automatico()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            System.Threading.Thread.Sleep(5000);
+        }
+
+        ///<summary>
+        /// Validar botones <> Carrusel Home BT
+        /// </summary>
+        [Test]
+        public void WebHome_002_Validar_Funcionalidad_Botones_NextyPrev_Carrusel_HomeBT()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            paginaBT.BtnNextPrevCarruselHomeBT();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
+
+        [Test]
+        public void WebHome_003_Validar_Funcionalidad_Botones_O_Carrusel_HomeBT()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            paginaBT.BtnSliderOCarruselHomeBT();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
 
 
 
@@ -78,6 +118,10 @@ namespace RevisionDiariaBT
             PropiedadColeccionDriver.driver.Quit();
 
         }
+
+        /// <summary>
+        /// Validar Imagenes del Carrusel
+        /// </summary>
 
         [Test]
         public void ValidarImagenesCarruselBT()
@@ -176,6 +220,8 @@ namespace RevisionDiariaBT
 
             PropiedadColeccionDriver.driver.Quit();
         }
+
+
     }
 
 }
