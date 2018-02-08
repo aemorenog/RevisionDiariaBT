@@ -178,11 +178,23 @@ namespace RevisionDiariaBT
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[2]/article[5]/div[2]/a/h4")]
         public IWebElement CategoriaEuropayLejanos { get; set; }
 
+        /// <summary>
+        /// Sección Ingresa (Login)
+        /// </summary>
+
+        [FindsBy(How = How.Id, Using = "email")]
+        public IWebElement txtEmail { get; set; }
+
+        [FindsBy(How = How.Id, Using = "pass")]
+        public IWebElement txtpassword { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[1]/div/nav/ul/li[1]/div/div/div/form/input[5]")]
+        public IWebElement btnIngresa { get; set; }
 
         ///<summary>
         /// Botones Next y Prev Carrusel Home BT
         /// </summary>
-        
+
         public void BtnNextPrevCarruselHomeBT()
         {
             System.Threading.Thread.Sleep(2000);
