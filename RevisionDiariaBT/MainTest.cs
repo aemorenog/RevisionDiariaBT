@@ -204,6 +204,58 @@ namespace RevisionDiariaBT
 
         }
 
+        [Test]
+        public void WebHome_Valida_Funcionalidad_Boton_Favoritos_Mundos()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            string correo = "pruebaingesmar@gmail.com";
+            string pass = "c123456";
+
+            System.Threading.Thread.Sleep(3000);
+
+            paginaBT.IngresarFavoritos(correo, pass);
+
+            System.Threading.Thread.Sleep(3000);
+
+            js.ExecuteScript("window.scrollBy(0,350);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            paginaBT.FavoritosViajes();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            System.Threading.Thread.Sleep(3000);
+
+            js.ExecuteScript("window.scrollBy(0,350);");
+
+            paginaBT.FavoritosTienda();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            System.Threading.Thread.Sleep(3000);
+
+            js.ExecuteScript("window.scrollBy(0,350);");
+
+            paginaBT.FavoritosDescuentos();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
+
 
 
 

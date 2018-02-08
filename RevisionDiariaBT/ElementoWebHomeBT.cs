@@ -191,6 +191,51 @@ namespace RevisionDiariaBT
         [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[1]/div/nav/ul/li[1]/div/div/div/form/input[5]")]
         public IWebElement btnIngresa { get; set; }
 
+        /// <summary>
+        /// Header BT
+        /// </summary>
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[1]/div/nav/ul/li[1]")]
+        public IWebElement menuIngresaCuenta { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[1]/div/nav/ul/li[2]/a/span")]
+        public IWebElement menuInformacionAyuda { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//*[@id=" + "modal - carro" + "]/span")]
+        public IWebElement menuCarrodeCompra { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[1]/div/nav/ul/li[4]/a/span")]
+        public IWebElement menuSeguimientoLinea { get; set; }
+
+        /// <summary>
+        /// Botón Favoritos Viajes
+        /// </summary>
+        /// 
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[4]/section/div[1]/div[2]/div[3]/ul/ul/li/a")]
+        public IWebElement btnFavoritosViajes { get; set; }
+
+        /// <summary>
+        /// Botón Favoritos Tienda
+        /// </summary>
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[4]/section/div[2]/div[2]/div[3]/ul/ul/li[1]/a")]
+        public IWebElement btnFavoritosTienda { get; set; }
+
+        /// <summary>
+        /// Botón Favoritos Descuentos
+        /// </summary>
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[4]/section/div[3]/div[2]/div[3]/ul/ul/li/a")]
+        public IWebElement btnFavoritosDescuentos { get; set; }
+
+        /// <summary>
+        /// Imagen BT
+        /// </summary>
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/section/div/div[5]/h1/a")]
+        public IWebElement ImagenBT { get; set; }
+
         ///<summary>
         /// Botones Next y Prev Carrusel Home BT
         /// </summary>
@@ -311,6 +356,28 @@ namespace RevisionDiariaBT
         }
 
         ///<summary>
+        /// Metódo Login BT
+        /// </summary>
+
+        public void logearse(string username, string password)
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            menuIngresaCuenta.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            txtEmail.SendKeys(username);
+
+            txtpassword.SendKeys(password);
+
+            System.Threading.Thread.Sleep(2000);
+
+            btnIngresa.Click();
+
+        }
+
+        ///<summary>
         /// Validar Carrusel BT
         /// </summary>
 
@@ -336,7 +403,52 @@ namespace RevisionDiariaBT
 
         }
 
+        ///<summary>
+        /// Método Agregar Favoritos
+        /// </summary>
+        public void IngresarFavoritos(string correo, string pass)
+        {
+            System.Threading.Thread.Sleep(2000);
 
+            menuIngresaCuenta.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            txtEmail.SendKeys(correo);
+
+            txtpassword.SendKeys(pass);
+
+            System.Threading.Thread.Sleep(2000);
+
+            btnIngresa.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            ImagenBT.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+        }
+
+        public void FavoritosViajes()
+        {
+            btnFavoritosViajes.Click();
+        }
+
+        public void FavoritosTienda()
+        {
+            btnFavoritosTienda.Click();
+        }
+
+        public void FavoritosDescuentos()
+        {
+            btnFavoritosDescuentos.Click();
+        }
+
+        public void IngresaImagenBT()
+        {
+            ImagenBT.Click();
+        }
     }
 
  }
