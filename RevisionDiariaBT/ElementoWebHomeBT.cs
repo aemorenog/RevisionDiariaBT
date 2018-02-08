@@ -52,7 +52,7 @@ namespace RevisionDiariaBT
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[1]/a")]
         public IWebElement btnCircularCarruselUno { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[2]/a")]
+        [FindsBy(How = How.ClassName, Using = "bx-pager-link")]
         public IWebElement btnCircularCarruselDos { get; set; }
 
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div[3]/a")]
@@ -65,13 +65,53 @@ namespace RevisionDiariaBT
         public IWebElement btnCircularCarruselQuinto { get; set; }
 
         ///<summary>
+        /// Link Destacados
+        /// </summary>
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[2]/a/img")]
+        public IWebElement CalugaCorreosChile { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[5]/a/img")]
+        public IWebElement CalugaLinio { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[6]/a/img")]
+        public IWebElement CalugaFrigosorno { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[6]/a/img")]
+        public IWebElement CalugaSamsung { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[8]/a/img")]
+        public IWebElement CalugaSalcobrand { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[9]/a/img")]
+        public IWebElement CalugaCorteIngles { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[10]/a/img")]
+        public IWebElement CalugaLibreriaNacional { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[11]/a/img")]
+        public IWebElement CalugaDespegar { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[12]/a/img")]
+        public IWebElement CalugaMovistar { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[12]/a/img")]
+        public IWebElement CalugaReifstore { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[14]/a/img")]
+        public IWebElement CalugaA3D { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/div/div/div[15]/a/img")]
+        public IWebElement CalugaViajesNovajet { get; set; }
+
+        ///<summary>
         /// Botones Calugas Home
         /// </summary>
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/button[2]")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/button[2]")]
         public IWebElement btnCalugasNext { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/button[1]")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/section/button[1]")]
         public IWebElement btnCalugaPrev { get; set; }
 
         ///<summary>
@@ -164,7 +204,7 @@ namespace RevisionDiariaBT
         {
             System.Threading.Thread.Sleep(1000);
 
-            btnCircularCarruselUno.Click();
+            btnCircularCarruselDos.Click();
 
             System.Threading.Thread.Sleep(1500);
 
@@ -172,20 +212,58 @@ namespace RevisionDiariaBT
 
             System.Threading.Thread.Sleep(1000);
 
-            btnCircularCarruselTres.Click();
+            btnCircularCarruselDos.Click();
 
             System.Threading.Thread.Sleep(1000);
 
-            btnCircularCarruselCuatro.Click();
+            btnCircularCarruselDos.Click();
 
             System.Threading.Thread.Sleep(1000);
 
-            QuintaImagenCarrusel.Click();
+            btnCircularCarruselDos.Click();
 
             System.Threading.Thread.Sleep(3000);
         }
 
+        /// <summary>
+        /// Ingreso de Link de Sliders
+        /// </summary>
+        /// 
 
+        public void GetPrimeraImagenCarrusel()
+        {
+            PrimerImagenCarrusel.Click();
+        }
+
+        public void GetSegundaImagenCarrusel()
+        {
+            SegundaImagenCarrusel.Click();
+        }
+
+        public void GetTerceraImagenCarrusel()
+        {
+            TerceraImagenCarrusel.Click();
+        }
+
+        public void GetCuartaImagenCarrusel()
+        {
+            CuartaImagenCarrusel.Click();
+        }
+
+        /// <summary>
+        /// Método Pulsar Botones Carrusel
+        /// </summary>
+        
+        public void getBtnNextCarrusel()
+        {
+            btnSiguienteCarrusel.Click();
+        }
+
+        public void getBtnPrevCarrusel()
+        {
+            btnSiguienteCarrusel.Click();
+        }
+        
         /// <summary>
         /// Ingreso de Enlace de Mundos BT
         /// </summary>
@@ -246,25 +324,7 @@ namespace RevisionDiariaBT
 
         }
 
-        public void GetPrimeraImagenCarrusel()
-        {
-            PrimerImagenCarrusel.Click();
-        }
 
-        public void GetSegundaImagenCarrusel()
-        {
-            SegundaImagenCarrusel.Click();
-        }
-
-        public void GetTerceraImagenCarrusel()
-        {
-            TerceraImagenCarrusel.Click();
-        }
-
-        public void GetCuartaImagenCarrusel()
-        {
-            CuartaImagenCarrusel.Click();
-        }
     }
 
  }

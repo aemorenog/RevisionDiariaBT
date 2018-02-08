@@ -75,66 +75,18 @@ namespace RevisionDiariaBT
 
         }
 
-
-
-        /// <summary>
-        /// Validacion Enlaces Mundo BT
-        /// </summary>
-
         [Test]
-        public void ValidarIngresoEnlacesMundos()
-        {
-            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
-
-            paginaBT.IngresarEnlaceMundoViajes();
-
-            System.Threading.Thread.Sleep(3000);
-
-            PropiedadColeccionDriver.driver.Navigate().Back();
-
-            paginaBT.IngresarEnlaceMundoTienda();
-
-             System.Threading.Thread.Sleep(3000);
-
-            PropiedadColeccionDriver.driver.Navigate().Back();
-
-            paginaBT.IngresarEnlaceMundoDescuentos();
-
-            PropiedadColeccionDriver.driver.Quit();
-
-        }
-
-        [Test]
-        public void ValidarBotonesCarruselBT()
-        {
-            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
-
-            System.Threading.Thread.Sleep(3000);
-
-            paginaBT.BtnNextCarrusel();
-
-            System.Threading.Thread.Sleep(3000);
-
-            PropiedadColeccionDriver.driver.Quit();
-
-        }
-
-        /// <summary>
-        /// Validar Imagenes del Carrusel
-        /// </summary>
-
-        [Test]
-        public void ValidarImagenesCarruselBT()
+        public void WebHome_004_Validar_Funcionalidad_Link_Slider_Carrusel_HomeBT()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
             IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
 
-            System.Threading.Thread.Sleep(300);
+            System.Threading.Thread.Sleep(1000);
 
             paginaBT.GetPrimeraImagenCarrusel();
 
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(2000);
 
             js.ExecuteScript("window.scrollBy(0,500);");
 
@@ -152,7 +104,7 @@ namespace RevisionDiariaBT
 
             System.Threading.Thread.Sleep(5000);
 
-            /// Segunda Imagen de Carrusel
+            /// Segundo Slider
 
             paginaBT.GetSegundaImagenCarrusel();
 
@@ -174,9 +126,11 @@ namespace RevisionDiariaBT
 
             System.Threading.Thread.Sleep(5000);
 
-            /// Tercera Imagen de Carrusel
+            /// Tercer Slider
 
             paginaBT.GetTerceraImagenCarrusel();
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
 
             System.Threading.Thread.Sleep(3000);
 
@@ -219,7 +173,38 @@ namespace RevisionDiariaBT
             System.Threading.Thread.Sleep(3000);
 
             PropiedadColeccionDriver.driver.Quit();
+
         }
+
+
+        /// <summary>
+        /// Validacion Enlaces Mundo BT
+        /// </summary>
+
+        [Test]
+        public void WebHome_Valida_Funcionalidad_Enlances_Mundos()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            paginaBT.IngresarEnlaceMundoViajes();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            paginaBT.IngresarEnlaceMundoTienda();
+
+             System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            paginaBT.IngresarEnlaceMundoDescuentos();
+
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
+
+
 
 
     }
