@@ -211,7 +211,7 @@ namespace RevisionDiariaBT
 
             IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
 
-            string correo = "pruebaingesmar@gmail.com";
+            string correo = "pruebaingesmart@gmail.com";
             string pass = "c123456";
 
             System.Threading.Thread.Sleep(3000);
