@@ -256,6 +256,29 @@ namespace RevisionDiariaBT
 
         }
 
+        [Test]
+        public void WebHome_Valida_Funcionalidad_Boton_CotizarViajes()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(3000);
+
+            js.ExecuteScript("window.scrollBy(0,400);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            paginaBT.IngresarViajeX();
+
+            System.Threading.Thread.Sleep(3000);
+
+            paginaBT.IngresoBotonCotizar();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
 
 
 

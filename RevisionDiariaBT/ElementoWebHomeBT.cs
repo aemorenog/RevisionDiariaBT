@@ -236,6 +236,22 @@ namespace RevisionDiariaBT
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div/section/div/div[5]/h1/a")]
         public IWebElement ImagenBT { get; set; }
 
+        /// <summary>
+        /// Viaje X
+        /// </summary>
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[2]/div[2]/div/div/div/div/div[4]/section/div[1]/div[3]/div[2]/h3/a")]
+        public IWebElement ViajeX { get; set; }
+
+
+        ///<summary>
+        /// Boton Cotizar
+        /// </summary>
+        /// 
+        [FindsBy(How = How.Name, Using = "Cotizar")]
+        public IWebElement btnCotizarViaje { get; set; }
+
+
         ///<summary>
         /// Botones Next y Prev Carrusel Home BT
         /// </summary>
@@ -430,6 +446,32 @@ namespace RevisionDiariaBT
 
         }
 
+        ///<summary>
+        /// Utilizar botón Ingresar Viaje X
+        /// </summary>
+
+        public void IngresarViajeX()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            ViajeX.Click();
+        }
+
+        /// <summary>
+        /// Utilizar botón Cotizar
+        /// </summary>
+        /// 
+        public void IngresoBotonCotizar()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            btnCotizarViaje.Click();
+        }
+
+        /// <summary>
+        /// Botones Favoritos
+        /// </summary>
+
         public void FavoritosViajes()
         {
             btnFavoritosViajes.Click();
@@ -449,6 +491,8 @@ namespace RevisionDiariaBT
         {
             ImagenBT.Click();
         }
+
+        
     }
 
  }
