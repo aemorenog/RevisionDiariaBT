@@ -194,7 +194,7 @@ namespace RevisionDiariaBT
 
             paginaBT.IngresarEnlaceMundoTienda();
 
-             System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(3000);
 
             PropiedadColeccionDriver.driver.Navigate().Back();
 
@@ -280,7 +280,60 @@ namespace RevisionDiariaBT
             PropiedadColeccionDriver.driver.Quit();
         }
 
+        [Test]
+        public void Web_Home_Valida_Icono_Carro_Compra()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(3000);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            paginaBT.IngresarBotónAgregarCarroProducto();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void WebHomeViajes_Validar_Funcionalidad_Slider_Automatico()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            System.Threading.Thread.Sleep(4000);
+
+            paginaBT.IraViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
+
+        [Test]
+        public void WebHomeViajes_Validar_Funcionalidad_NextyPrev_Slider()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoViajes paginaVJ = new ElementoWebMundoViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            paginaBT.IraViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            paginaVJ.BtnNextPrevCarruselHomeViajesBT();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
 
     }
 

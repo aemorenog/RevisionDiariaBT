@@ -20,10 +20,10 @@ namespace RevisionDiariaBT
         ///Botóne Next and Prev
         /// </summary>
 
-        [FindsBy(How = How.ClassName, Using = "flex-next")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/ul/li[2]/a")]
         public IWebElement btnNetxMundoViajes { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "flex-prev")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/ul/li[1]/a")]
         public IWebElement btnPrevMundoViajes { get; set; }
 
         ///<summary>
@@ -101,5 +101,23 @@ namespace RevisionDiariaBT
 
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/section[1]/article[1]/div[2]/a/h4")]
         public IWebElement CategoriaCorteInglesVuelo { get; set; }
+
+        ///<summary>
+        /// Metódo Botones Next and Prev
+        /// </summary>
+        /// 
+        public void BtnNextPrevCarruselHomeViajesBT()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            btnNetxMundoViajes.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            btnPrevMundoViajes.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+        }
     }
 }

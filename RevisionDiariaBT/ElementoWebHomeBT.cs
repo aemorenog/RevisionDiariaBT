@@ -248,9 +248,16 @@ namespace RevisionDiariaBT
         /// Boton Cotizar
         /// </summary>
         /// 
-        [FindsBy(How = How.Name, Using = "Cotizar")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[3]/div/div/div[4]/div[2]/div[2]/div[1]/div/div/div[3]/div[2]/article/div[2]/div[1]/div[2]/div/form/input[9]")]
         public IWebElement btnCotizarViaje { get; set; }
 
+
+        ///<summary>
+        /// Botón Carro de Compra
+        /// </summary>
+        /// 
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[2]/div[2]/div/div/div/div/div[4]/section/div[2]/div[2]/div[3]/ul/ul/li[2]/a")]
+        public IWebElement btnAgregarCarritoCompra { get; set; }
 
         ///<summary>
         /// Botones Next y Prev Carrusel Home BT
@@ -447,6 +454,17 @@ namespace RevisionDiariaBT
         }
 
         ///<summary>
+        /// Utilizar el botón Agregar Carro
+        /// </summary>
+
+       public void IngresarBotónAgregarCarroProducto()
+        {
+            btnAgregarCarritoCompra.Click();
+        }
+       
+
+
+        ///<summary>
         /// Utilizar botón Ingresar Viaje X
         /// </summary>
 
@@ -492,7 +510,23 @@ namespace RevisionDiariaBT
             ImagenBT.Click();
         }
 
-        
+        ///<sumary>
+        /// Metodo Ir a Viajes
+        /// </sumary>
+        /// 
+
+        public void IraViajes()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            menuViajes.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            opcionMenuIrViajes.Click();
+
+            System.Threading.Thread.Sleep(20000);
+        }
     }
 
  }
