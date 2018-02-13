@@ -182,7 +182,7 @@ namespace RevisionDiariaBT
         /// </summary>
 
         [Test]
-        public void WebHome_Valida_Funcionalidad_Enlances_Mundos()
+        public void WebHome_Validar_Funcionalidad_Enlances_Mundos()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
@@ -205,7 +205,7 @@ namespace RevisionDiariaBT
         }
 
         [Test]
-        public void WebHome_Valida_Funcionalidad_Boton_Favoritos_Mundos()
+        public void WebHome_Validar_Funcionalidad_Boton_Favoritos_Mundos()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
@@ -257,7 +257,7 @@ namespace RevisionDiariaBT
         }
 
         [Test]
-        public void WebHome_Valida_Funcionalidad_Boton_CotizarViajes()
+        public void WebHome_Validar_Funcionalidad_Boton_CotizarViajes()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
@@ -281,7 +281,7 @@ namespace RevisionDiariaBT
         }
 
         [Test]
-        public void Web_Home_Valida_Icono_Carro_Compra()
+        public void Web_Home_Validar_Icono_Carro_Compra()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
@@ -333,6 +333,84 @@ namespace RevisionDiariaBT
             System.Threading.Thread.Sleep(4000);
 
             PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void WebHomeViajes_Validar_Funcionalidad_Btn_Carrusel()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoViajes paginaVJ = new ElementoWebMundoViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            paginaBT.IraViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            paginaVJ.BtnSliderOCarruselMundoViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void WebHomeViajes_Validar_Funcionalidad_Link_Sliders_Carrusel()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoViajes paginaVJ = new ElementoWebMundoViajes();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(4000);
+
+            paginaBT.IraViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            paginaVJ.IngresarPrimeraImagenCarruselViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Segunda Imagen
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaVJ.IngresarSegundoCirculo();
+
+            paginaVJ.IngresarSegundaImagenCarruselViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Tercera Imagen
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaVJ.IngresarTercerCirculo();
+
+            paginaVJ.IngresarTerceraImagenCarruselViajes();
+
+            System.Threading.Thread.Sleep(4000);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
         }
 
     }

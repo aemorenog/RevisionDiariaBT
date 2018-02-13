@@ -30,13 +30,13 @@ namespace RevisionDiariaBT
         ///Botones debajo de cada imagen carrusel Mundo Viajes
         /// </summary>
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/article/div[1]/ol/li[1]/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/ol/li[1]/a")]
         public IWebElement btnUnoCarrusel { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/article/div[1]/ol/li[2]/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/ol/li[2]/a")]
         public IWebElement btnDosCarrusel { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/article/div[1]/ol/li[3]/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/ol/li[3]/a")]
         public IWebElement btnTresCarrusel { get; set; }
 
 
@@ -44,13 +44,13 @@ namespace RevisionDiariaBT
         /// Carrusel Viajes
         /// </summary>
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[4]/div/div[2]/h3/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/div/ul/li[2]/a/img")]
         public IWebElement PrimeraImagenViajeCarrusel { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[4]/div/div[2]/h3/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/div/ul/li[3]/a/img")]
         public IWebElement SegundaImagenCarrusel { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[4]/div/div[2]/h3/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/div/ul/li[4]/a/img")]
         public IWebElement TerceraImagenViajeCarrusel { get; set; }
 
         ///<summary>
@@ -103,7 +103,7 @@ namespace RevisionDiariaBT
         public IWebElement CategoriaCorteInglesVuelo { get; set; }
 
         ///<summary>
-        /// Metódo Botones Next and Prev
+        /// Método Botones Next and Prev
         /// </summary>
         /// 
         public void BtnNextPrevCarruselHomeViajesBT()
@@ -119,5 +119,65 @@ namespace RevisionDiariaBT
             System.Threading.Thread.Sleep(2000);
 
         }
+
+        /// <summary>
+        /// Método botones circulares Carrusel Mundo Viajes
+        /// </summary>
+        /// 
+        public void BtnSliderOCarruselMundoViajes()
+        {
+            System.Threading.Thread.Sleep(1500);
+
+            btnUnoCarrusel.Click();
+
+            System.Threading.Thread.Sleep(1000);
+
+            btnDosCarrusel.Click();
+
+            System.Threading.Thread.Sleep(1000);
+
+            btnTresCarrusel.Click();
+
+            System.Threading.Thread.Sleep(1500);
+        }
+
+        ///<summary>
+        /// Método Ingresar Sliders Carrusel Mundo Viajes
+        /// </summary>
+        /// 
+        public void IngresarPrimeraImagenCarruselViajes()
+        {
+            PrimeraImagenViajeCarrusel.Click();            
+        }
+
+        public void IngresarSegundaImagenCarruselViajes()
+        {
+            SegundaImagenCarrusel.Click();
+        }
+
+        public void IngresarTerceraImagenCarruselViajes()
+        {
+            TerceraImagenViajeCarrusel.Click();
+        }
+
+        ///<summary>
+        /// Método Ingresa botones circulares sliders Carrusel Mundo Viajes
+        /// </summary>
+        /// 
+        public void IngresarPrimerCirculo()
+        {
+            btnUnoCarrusel.Click();
+        }
+
+        public void IngresarSegundoCirculo()
+        {
+            btnDosCarrusel.Click();
+        }
+
+        public void IngresarTercerCirculo()
+        {
+            btnTresCarrusel.Click();
+        }
+
     }
 }
