@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -364,19 +365,19 @@ namespace RevisionDiariaBT
 
             IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
 
-            System.Threading.Thread.Sleep(4000);
+            System.Threading.Thread.Sleep(2000);
 
             paginaBT.IraViajes();
 
-            System.Threading.Thread.Sleep(4000);
+            //System.Threading.Thread.Sleep(1000);
 
             paginaVJ.IngresarPrimeraImagenCarruselViajes();
 
-            System.Threading.Thread.Sleep(4000);
+            System.Threading.Thread.Sleep(2500);
 
             js.ExecuteScript("window.scrollBy(0,650);");
 
-            System.Threading.Thread.Sleep(4000);
+            System.Threading.Thread.Sleep(3000);
 
             PropiedadColeccionDriver.driver.Navigate().Back();
 
@@ -388,11 +389,11 @@ namespace RevisionDiariaBT
 
             paginaVJ.IngresarSegundaImagenCarruselViajes();
 
-            System.Threading.Thread.Sleep(4000);
+            System.Threading.Thread.Sleep(2500);
 
             js.ExecuteScript("window.scrollBy(0,650);");
 
-            System.Threading.Thread.Sleep(4000);
+            System.Threading.Thread.Sleep(3000);
 
             PropiedadColeccionDriver.driver.Navigate().Back();
 
@@ -402,13 +403,15 @@ namespace RevisionDiariaBT
 
             paginaVJ.IngresarTercerCirculo();
 
+            System.Threading.Thread.Sleep(1000);
+
             paginaVJ.IngresarTerceraImagenCarruselViajes();
 
-            System.Threading.Thread.Sleep(4000);
+            System.Threading.Thread.Sleep(2500);
 
             js.ExecuteScript("window.scrollBy(0,650);");
 
-            System.Threading.Thread.Sleep(4000);
+            System.Threading.Thread.Sleep(3000);
 
             PropiedadColeccionDriver.driver.Navigate().Back();
         }

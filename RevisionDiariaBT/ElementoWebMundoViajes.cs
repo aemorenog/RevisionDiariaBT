@@ -48,7 +48,7 @@ namespace RevisionDiariaBT
         public IWebElement PrimeraImagenViajeCarrusel { get; set; }
 
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/div/ul/li[3]/a/img")]
-        public IWebElement SegundaImagenCarrusel { get; set; }
+        public IWebElement SegundaImagenViajeCarrusel { get; set; }
 
         [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/section/div/article/div[1]/div/ul/li[4]/a/img")]
         public IWebElement TerceraImagenViajeCarrusel { get; set; }
@@ -152,7 +152,7 @@ namespace RevisionDiariaBT
 
         public void IngresarSegundaImagenCarruselViajes()
         {
-            SegundaImagenCarrusel.Click();
+            SegundaImagenViajeCarrusel.Click();
         }
 
         public void IngresarTerceraImagenCarruselViajes()
@@ -179,5 +179,10 @@ namespace RevisionDiariaBT
             btnTresCarrusel.Click();
         }
 
+        ///<summary>
+        /// Método Ingresa Viajes Destacados
+        /// </summary>
+        /// 
+        public void 
     }
 }

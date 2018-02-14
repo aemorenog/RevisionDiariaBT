@@ -525,7 +525,7 @@ namespace RevisionDiariaBT
 
             opcionMenuIrViajes.Click();
 
-            System.Threading.Thread.Sleep(20000);
+            System.Threading.Thread.Sleep(2000);
         }
     }
 
