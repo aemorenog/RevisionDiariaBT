@@ -414,8 +414,213 @@ namespace RevisionDiariaBT
             System.Threading.Thread.Sleep(3000);
 
             PropiedadColeccionDriver.driver.Navigate().Back();
+
+            PropiedadColeccionDriver.driver.Quit();
         }
 
+
+
+        [Test]
+        public void WebHomeViajes_Validar_Funcionalidad_Ingreso_Viajes_Destacados()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoViajes paginaVJ = new ElementoWebMundoViajes();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraViajes();
+
+            System.Threading.Thread.Sleep(1000);
+
+            paginaVJ.IngresarViajeDestacado1();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///
+            System.Threading.Thread.Sleep(400);
+
+            paginaVJ.IngresarViajeDestacado2();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaVJ.IngresarViajeDestacado3();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
+
+        [Test]
+        public void WebHomeViajes_Validar_Funcionalidad_Links_CorteIngles()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoViajes paginaVJ = new ElementoWebMundoViajes();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraViajes();
+
+            js.ExecuteScript("window.scrollBy(0,850);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            paginaVJ.IngresaCorteInglesVerano();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles[1]).Close();
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(2000);
+
+            ///
+            paginaVJ.IngresaCorteInglesEuropa();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles[1]).Close();
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            ///
+            paginaVJ.IngresaCorteInglesVuelo();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles[1]).Close();
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(2000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void WebHomeViajes_Validar_Funcionalidad_Links_ProgramasCorteIngles()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoViajes paginaVJ = new ElementoWebMundoViajes();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraViajes();
+
+            js.ExecuteScript("window.scrollBy(0,850);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            paginaVJ.IngresarProgramaVuelos();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles[1]).Close();
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(2000);
+
+            ///
+            paginaVJ.IngresarProgramaHoteles();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles[1]).Close();
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            ///
+            paginaVJ.IngresarProgramas();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles[1]).Close();
+
+            PropiedadColeccionDriver.driver.SwitchTo().Window(PropiedadColeccionDriver.driver.WindowHandles.Last());
+
+            System.Threading.Thread.Sleep(2000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void WebHomeViajes_Validar_Funcionalidad_Viajes_Destacados()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoViajes paginaVJ = new ElementoWebMundoViajes();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraViajes();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,2500);");
+
+            System.Threading.Thread.Sleep(6000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
     }
 
 }

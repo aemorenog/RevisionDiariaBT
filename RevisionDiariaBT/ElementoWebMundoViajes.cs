@@ -57,13 +57,13 @@ namespace RevisionDiariaBT
         /// Descubre Las Ofertas destacadas de esta semana
         /// </summary>
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/div/div/article[1]/div[2]/h5")]
+        [FindsBy(How = How.XPath, Using = "")]
         public IWebElement ViajeDestacadoSemana1 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/div/div/article[2]/div[2]/h5")]
+        [FindsBy(How = How.XPath, Using = "")]
         public IWebElement ViajeDestacadoSemana2 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/div/div/article[3]/div[2]/h5")]
+        [FindsBy(How = How.XPath, Using = "")]
         public IWebElement ViajeDestacadoSemana3 { get; set; }
 
 
@@ -71,36 +71,53 @@ namespace RevisionDiariaBT
         /// Viajes Destacados 
         /// </summary>
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[4]/div/div[2]/h3/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/section/div[1]/div[2]/div[4]/div/div[2]/h3/a")]
         public IWebElement ViajeDestacadoDelMes1 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[5]/div/div[2]/h3/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/section/div[1]/div[2]/div[5]/div/div[2]/h3/a")]
         public IWebElement ViajeDestacadoDelMes2 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[6]/div/div[2]/h3/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/section/div[1]/div[2]/div[6]/div/div[2]/h3/a")]
         public IWebElement ViajeDestacadoDelMes3 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[7]/div/div[2]/h3/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/section/div[1]/div[2]/div[7]/div/div[2]/h3/a")]
         public IWebElement ViajeDestacadoDelMes4 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[8]/div/div[2]/h3/as")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/section/div[1]/div[2]/div[8]/div/div[2]/h3/a")]
         public IWebElement ViajeDestacadoDelMes5 { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[9]/div/div[2]/h3/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/section/div[1]/div[2]/div[9]/div/div[2]/h3/a")]
         public IWebElement ViajeDestacadoDelMes6 { get; set; }
 
         ///<summary>
         ///Especial Viajes El Corte Inglés
         /// </summary>
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/section[1]/article[1]/div[2]/a/h4")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/section/div[1]/div[2]/section[1]/article[1]/div[2]/a/h4")]
         public IWebElement CategoriaCorteInglesVerano { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/section[1]/article[2]/div[2]/a/h4")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/section/div[1]/div[2]/section[1]/article[2]/div[2]/a/h4")]
         public IWebElement CategoriaCorteInglesEuropa { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/section[1]/article[1]/div[2]/a/h4")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div[3]/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div/div[2]/section/div[1]/div[2]/section[1]/article[3]/div[2]/a/h4")]
         public IWebElement CategoriaCorteInglesVuelo { get; set; }
+
+        //
+
+
+        /// <summary>
+        /// Ingreso Programas Vuelos, Hoteles y Programas
+        /// </summary>
+
+        [FindsBy(How = How.LinkText, Using = "Ver todos los Vuelos")]
+        public IWebElement VerTodosLosVuelos { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Ver todos los Hoteles")]
+        public IWebElement VerTodosLosHoteles { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Ver todos los programas")]
+        public IWebElement VerTodosLosProgramas { get; set; }
+
 
         ///<summary>
         /// Método Botones Next and Prev
@@ -183,6 +200,96 @@ namespace RevisionDiariaBT
         /// Método Ingresa Viajes Destacados
         /// </summary>
         /// 
-        public void 
+        public void IngresarViajeDestacado1()
+        {
+            ViajeDestacadoSemana1.Click();
+        }
+
+        public void IngresarViajeDestacado2()
+        {
+            ViajeDestacadoSemana2.Click();
+        }
+
+        public void IngresarViajeDestacado3()
+        {
+            ViajeDestacadoSemana3.Click();
+        }
+
+        /// <summary>
+        /// Métodos Ingresa Programa Corte Ingles
+        /// </summary>
+        /// 
+        public void IngresaCorteInglesVerano()
+        {
+
+            CategoriaCorteInglesVerano.Click();
+        }
+
+        public void IngresaCorteInglesEuropa()
+        {
+
+            CategoriaCorteInglesEuropa.Click();
+        }
+
+        public void IngresaCorteInglesVuelo()
+        {
+
+            CategoriaCorteInglesVuelo.Click();
+        }
+
+        /// <summary>
+        /// Método para ingresar links Programas Vuelos, Hoteles y Programas
+        /// </summary>
+        /// 
+
+        public void IngresarProgramaVuelos()
+        {
+            VerTodosLosVuelos.Click();
+        }
+
+        public void IngresarProgramaHoteles()
+        {
+            VerTodosLosHoteles.Click();
+        }
+
+        public void IngresarProgramas()
+        {
+            VerTodosLosProgramas.Click();
+        }
+
+        ///<summary>
+        /// Método para ingresar links Viajes Destacados
+        /// </summary>
+
+        public void IngresoViajeDestacado1()
+        {
+            ViajeDestacadoDelMes1.Click();
+        }
+
+        public void IngresoViajeDestacado2()
+        {
+            ViajeDestacadoDelMes2.Click();
+        }
+
+        public void IngresoViajeDestacado3()
+        {
+            ViajeDestacadoDelMes3.Click();
+        }
+
+        public void IngresoViajeDestacado4()
+        {
+            ViajeDestacadoDelMes4.Click();
+        }
+
+        public void IngresoViajeDestacado5()
+        {
+            ViajeDestacadoDelMes5.Click();
+        }
+
+        public void IngresoViajeDestacado6()
+        {
+            ViajeDestacadoDelMes6.Click();
+        }
     }
+
 }
