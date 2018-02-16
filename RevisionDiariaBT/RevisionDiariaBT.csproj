@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ElementoWebHomeBT.cs" />
+    <Compile Include="ElementoWebMundoTienda.cs" />
     <Compile Include="ElementoWebMundoViajes.cs" />
     <Compile Include="MainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -119,6 +119,31 @@ namespace RevisionDiariaBT
         public IWebElement VerTodosLosProgramas { get; set; }
 
 
+        /// <summary>
+        /// Calugas Categorias Explorar Viajes
+        /// </summary>
+        /// 
+
+
+        [FindsBy(How = How.LinkText, Using = "Chile")]
+        public IWebElement ViajesCategoriaChile { get; set; }
+
+
+        [FindsBy(How = How.LinkText, Using = "Sudamérica")]
+        public IWebElement ViajesCategoriaSudamérica { get; set; }
+
+
+        [FindsBy(How = How.LinkText, Using = "México y Caribe")]
+        public IWebElement ViajesCategoriaMexicoyCaribe { get; set; }
+
+
+        [FindsBy(How = How.LinkText, Using = "Norteamérica")]
+        public IWebElement ViajesCategoriaNorteamérica { get; set; }
+
+
+        [FindsBy(How = How.LinkText, Using = "Europa y Lejanos")]
+        public IWebElement ViajesCategoriaEuropayLejanos { get; set; }
+
         ///<summary>
         /// Método Botones Next and Prev
         /// </summary>
@@ -289,6 +314,35 @@ namespace RevisionDiariaBT
         public void IngresoViajeDestacado6()
         {
             ViajeDestacadoDelMes6.Click();
+        }
+
+        /// <summary>
+        /// Método para ingresar categorias Viajes
+        /// </summary>
+        /// 
+        public void IngresarCategoriaChile()
+        {
+            ViajesCategoriaChile.Click();
+        }
+
+        public void IngresarCategoriaSudamerica()
+        {
+            ViajesCategoriaSudamérica.Click();
+        }
+
+        public void IngresarCategoriaMexicoCaribe()
+        {
+            ViajesCategoriaMexicoyCaribe.Click();
+        }
+
+        public void IngresarCategoriaNorteamerica()
+        {
+            ViajesCategoriaNorteamérica.Click();
+        }
+
+        public void IngresarCategoriaEuropaLejanos()
+        {
+            ViajesCategoriaEuropayLejanos.Click();
         }
     }
 
