@@ -72,7 +72,29 @@ namespace RevisionDiariaBT
 
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[2]/div[1]/div[10]/div/div[2]/h3/a")]
         public IWebElement ProductoDestacado9 { get; set; }
-        
+
+        /// <summary>
+        /// Categorias Mundo Tienda
+        /// </summary>
+
+
+        [FindsBy(How = How.LinkText, Using = "Tecnología")]
+        public IWebElement CategoriaTiendaTecnologia { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Hogar")]
+        public IWebElement CategoriaTiendaHogar { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Belleza")]
+        public IWebElement CategoriaTiendaBelleza { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Deportes")]
+        public IWebElement CategoriaTiendaDeportes { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Infantil")]
+        public IWebElement CategoriaTiendaInfantil { get; set; }
+
+
+
         ///<summary>
         /// Método para botónes circulares de Carrusel Tienda
         /// </summary>
@@ -157,6 +179,36 @@ namespace RevisionDiariaBT
         public void IngresarProductoDestacadoTienda9()
         {
             ProductoDestacado9.Click();
+        }
+
+
+        /// <summary>
+        /// Método para ingresar categorias Tienda
+        /// </summary>
+        /// 
+        public void IngresarCategoriaTecnologia()
+        {
+            CategoriaTiendaTecnologia.Click();
+        }
+
+        public void IngresarCategoriaHogar()
+        {
+            CategoriaTiendaHogar.Click();
+        }
+
+        public void IngresarCategoriaBelleza()
+        {
+            CategoriaTiendaBelleza.Click();
+        }
+
+        public void IngresarCategoriaDeportes()
+        {
+            CategoriaTiendaDeportes.Click();
+        }
+
+        public void IngresarCategoriaInfantil()
+        {
+            CategoriaTiendaInfantil.Click();
         }
     }
 }

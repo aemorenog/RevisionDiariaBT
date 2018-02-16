@@ -835,7 +835,7 @@ namespace RevisionDiariaBT
         }
 
         [Test]
-        public void WebHomeTienda_Validar_Funcionalidad_Ingreso_Viajes_Destacados()
+        public void WebHomeTienda_Validar_Funcionalidad_Ingreso_Tienda_Destacados()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
@@ -888,6 +888,92 @@ namespace RevisionDiariaBT
 
             PropiedadColeccionDriver.driver.Quit();
 
+        }
+
+        [Test]
+        public void WebHomeTienda_Validar_Funcionalidad_Categorias_Tienda()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoTienda paginaTienda = new ElementoWebMundoTienda();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraTienda();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,1900);");
+
+            System.Threading.Thread.Sleep(5000);
+
+            ///Categoria Tecnología
+            ///
+            paginaTienda.IngresarCategoriaTecnologia();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///Categoria Hogar
+            ///
+
+            paginaTienda.IngresarCategoriaHogar();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///Categoria Belleza
+            ///
+
+            paginaTienda.IngresarCategoriaBelleza();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///Categoria Deportes
+            ///
+
+            paginaTienda.IngresarCategoriaDeportes();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Categoría Infantil
+            /// 
+
+            paginaTienda.IngresarCategoriaInfantil();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            PropiedadColeccionDriver.driver.Quit();
         }
 
     }
