@@ -527,6 +527,22 @@ namespace RevisionDiariaBT
 
             System.Threading.Thread.Sleep(2000);
         }
+
+        /// <summary>
+        /// Método Ir a Tienda
+        /// </summary>
+        public void IraTienda()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            menuTienda.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            opcionMenuIrTienda.Click();
+
+            System.Threading.Thread.Sleep(2000);
+        }
     }
 
  }

@@ -40,7 +40,7 @@ namespace RevisionDiariaBT
         /// </summary>
         /// 
         [Test]
-        public void WebHome_001_Validar_Funcionalidad_Slider_HomeBT_Automatico()
+        public void WebHome_Validar_Funcionalidad_Slider_HomeBT_Automatico()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
@@ -51,7 +51,7 @@ namespace RevisionDiariaBT
         /// Validar botones <> Carrusel Home BT
         /// </summary>
         [Test]
-        public void WebHome_002_Validar_Funcionalidad_Botones_NextyPrev_Carrusel_HomeBT()
+        public void WebHome_Validar_Funcionalidad_Botones_NextyPrev_Carrusel_HomeBT()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
@@ -64,7 +64,7 @@ namespace RevisionDiariaBT
         }
 
         [Test]
-        public void WebHome_003_Validar_Funcionalidad_Botones_O_Carrusel_HomeBT()
+        public void WebHome_Validar_Funcionalidad_Botones_O_Carrusel_HomeBT()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
@@ -77,7 +77,7 @@ namespace RevisionDiariaBT
         }
 
         [Test]
-        public void WebHome_004_Validar_Funcionalidad_Link_Slider_Carrusel_HomeBT()
+        public void WebHome_Validar_Funcionalidad_Link_Slider_Carrusel_HomeBT()
         {
             ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
 
@@ -769,6 +769,122 @@ namespace RevisionDiariaBT
             paginaBT.IraTienda();
 
             System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Quit();
+
+        }
+
+        [Test]
+        public void WebHomeTienda_Validar_Funcionalidad_Link_Sliders_Carrusel()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoTienda paginaTienda = new ElementoWebMundoTienda();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraTienda();
+
+            //System.Threading.Thread.Sleep(1000);
+
+            paginaTienda.IngresarPrimeraImagenCarruselTienda();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Segunda Imagen
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarSegundoBtnCircular();
+
+            paginaTienda.IngresarSegundaImagenCarruselTienda();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Tercera Imagen
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarTerceroBtnCircular();
+
+            System.Threading.Thread.Sleep(1000);
+
+            paginaTienda.IngresarTerceraImagenCarruselTienda();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void WebHomeTienda_Validar_Funcionalidad_Ingreso_Viajes_Destacados()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoTienda paginaTienda = new ElementoWebMundoTienda();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraTienda();
+
+            System.Threading.Thread.Sleep(1000);
+
+            paginaTienda.IngresarProductoDestacadoTienda1();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarProductoDestacadoTienda2();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarProductoDestacadoTienda3();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
 
             PropiedadColeccionDriver.driver.Quit();
 
