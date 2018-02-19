@@ -551,15 +551,15 @@ namespace RevisionDiariaBT
 
         public void IraDescuento()
         {
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(6000);
 
             menuDescuento.Click();
 
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(6000);
 
             opcionMenuIrDescuento.Click();
 
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(6000);
         }
     }
 

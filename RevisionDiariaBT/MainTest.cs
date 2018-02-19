@@ -1086,6 +1086,82 @@ namespace RevisionDiariaBT
 
         }
 
+        [Test]
+        public void WebHomeDescuentos_Validar_Funcionalidad_Link_Sliders_Carrusel()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoDescuento paginaDescuentos = new ElementoWebMundoDescuento();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraTienda();
+
+            //System.Threading.Thread.Sleep(1000);
+
+            paginaDescuentos.IngresarImagenDescuento1();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Segunda Imagen
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarBtnCarrusel2();
+
+            paginaDescuentos.IngresarImagenDescuento2();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Tercera Imagen
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarBtnCarrusel3();
+
+            System.Threading.Thread.Sleep(1000);
+
+            paginaDescuentos.IngresarImagenDescuento3();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            /// Cuarta Imagen
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarBtnCarrusel4();
+
+            System.Threading.Thread.Sleep(1000);
+
+            paginaDescuentos.IngresarImagenDescuento4();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
     }
 
 }

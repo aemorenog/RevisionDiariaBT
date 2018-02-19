@@ -49,7 +49,52 @@ namespace RevisionDiariaBT
         public IWebElement BtnCarruselDescuento4 { get; set; }
 
 
+        /// <summary>
+        /// Métodos para ingresar imagenes del carrusel
+        /// </summary>
 
+        public void IngresarImagenDescuento1()
+        {
+            ImagenCarruselDescuento1.Click();
+        }
 
+        public void IngresarImagenDescuento2()
+        {
+            ImagenCarruselDescuento2.Click();
+        }
+
+        public void IngresarImagenDescuento3()
+        {
+            ImagenCarruselDescuento3.Click();
+        }
+
+        public void IngresarImagenDescuento4()
+        {
+            ImagenCarruselDescuento4.Click();
+        }
+
+        /// <summary>
+        /// Métodos para ingresar botónes circulares carrusel
+        /// </summary>
+
+        public void IngresarBtnCarrusel1()
+        {
+            BtnCarruselDescuentos1.Click();
+        }
+
+        public void IngresarBtnCarrusel2()
+        {
+            BtnCarruselDescuento2.Click();
+        }
+
+        public void IngresarBtnCarrusel3()
+        {
+            BtnCarruselDescuento3.Click();
+        }
+
+        public void IngresarBtnCarrusel4()
+        {
+            BtnCarruselDescuento4.Click();
+        }
     }
 }
