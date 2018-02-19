@@ -1097,7 +1097,7 @@ namespace RevisionDiariaBT
 
             System.Threading.Thread.Sleep(2000);
 
-            paginaBT.IraTienda();
+            paginaBT.IraDescuento();
 
             //System.Threading.Thread.Sleep(1000);
 
@@ -1142,6 +1142,8 @@ namespace RevisionDiariaBT
             js.ExecuteScript("window.scrollBy(0,650);");
 
             System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
 
             /// Cuarta Imagen
 
