@@ -543,6 +543,24 @@ namespace RevisionDiariaBT
 
             System.Threading.Thread.Sleep(2000);
         }
+
+        /// <summary>
+        /// Método Ir a Descuento
+        /// </summary>
+        /// 
+
+        public void IraDescuento()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            menuDescuento.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            opcionMenuIrDescuento.Click();
+
+            System.Threading.Thread.Sleep(2000);
+        }
     }
 
- }
+}

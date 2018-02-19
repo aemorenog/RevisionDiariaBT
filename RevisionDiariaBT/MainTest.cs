@@ -849,6 +849,8 @@ namespace RevisionDiariaBT
 
             System.Threading.Thread.Sleep(1000);
 
+            /// Producto 1
+
             paginaTienda.IngresarProductoDestacadoTienda1();
 
             System.Threading.Thread.Sleep(2500);
@@ -859,7 +861,7 @@ namespace RevisionDiariaBT
 
             PropiedadColeccionDriver.driver.Navigate().Back();
 
-            ///
+            /// Producto 2
             System.Threading.Thread.Sleep(400);
 
             paginaTienda.IngresarProductoDestacadoTienda2();
@@ -872,7 +874,7 @@ namespace RevisionDiariaBT
 
             PropiedadColeccionDriver.driver.Navigate().Back();
 
-            ///
+            /// Producto 3
 
             System.Threading.Thread.Sleep(400);
 
@@ -886,7 +888,100 @@ namespace RevisionDiariaBT
 
             PropiedadColeccionDriver.driver.Navigate().Back();
 
+            /// Producto 4
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarProductoDestacadoTienda4();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 5
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarProductoDestacadoTienda5();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 6
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarProductoDestacadoTienda6();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 7
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarProductoDestacadoTienda7();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 8
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarProductoDestacadoTienda8();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 8
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaTienda.IngresarProductoDestacadoTienda9();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            System.Threading.Thread.Sleep(3000);
+
             PropiedadColeccionDriver.driver.Quit();
+
 
         }
 
@@ -974,6 +1069,21 @@ namespace RevisionDiariaBT
             PropiedadColeccionDriver.driver.Navigate().Back();
 
             PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void WebHomeDescuentos_Validar_Funcionalidad_Slider_Automatico()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            System.Threading.Thread.Sleep(6000);
+
+            paginaBT.IraDescuento();
+
+            System.Threading.Thread.Sleep(6000);
+
+            PropiedadColeccionDriver.driver.Quit();
+
         }
 
     }
