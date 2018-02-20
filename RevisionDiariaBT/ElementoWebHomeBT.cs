@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -260,6 +261,58 @@ namespace RevisionDiariaBT
         public IWebElement btnAgregarCarritoCompra { get; set; }
 
         ///<summary>
+        /// Elementos Carro Compra
+        /// </summary>
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[3]/div[2]/div[2]/div/div/div[2]/div[2]/article/div[3]/div[1]/div[2]/div/p/button")]
+        public IWebElement btnCarroTienda { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "button_carro_tienda")]
+        public IWebElement btnAgregarCarro { get; set; }
+
+        [FindsBy(How = How.Id, Using = "pagar")]
+        public IWebElement btnIrPagar { get; set; }
+
+        [FindsBy(How = How.Id, Using = "cli-rut")]
+        public IWebElement txtRutCliente { get; set; }
+
+        [FindsBy(How = How.Id, Using = "cli-nombre")]
+        public IWebElement txtNombreCliente { get; set; }
+
+        [FindsBy(How = How.Id, Using = "cli-apellido")]
+        public IWebElement txtApellidosCliente { get; set; }
+
+        [FindsBy(How = How.Id, Using = "cli-email")]
+        public IWebElement txtEmailCliente { get; set; }
+
+        [FindsBy(How = How.Id, Using = "cli-celular")]
+        public IWebElement txtCelularCliente { get; set; }
+
+        [FindsBy(How = How.Id, Using = "dir-nombre")]
+        public IWebElement txtAliasDireccionCliente { get; set; }
+
+        [FindsBy(How = How.Id, Using = "direccion-despacho")]
+        public IWebElement txtDireccion { get; set; }
+
+        [FindsBy(How = How.Id, Using = "region-despacho")]
+        public IWebElement comboRegionDespacho { get; set; }
+
+        [FindsBy(How = How.Id, Using = "comuna-despacho")]
+        public IWebElement comboComunaDespacho { get; set; }
+
+        [FindsBy(How = How.Id, Using = "btn-continuar-p3")]
+        public IWebElement btnContinuar { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "btns-despacho")]
+        public IWebElement btnDespacho { get; set; }
+
+
+        ///<summary>
+        /// Método Ir a Pagar
+        /// </summary>
+
+
+        ///<summary>
         /// Botones Next y Prev Carrusel Home BT
         /// </summary>
 
@@ -460,8 +513,64 @@ namespace RevisionDiariaBT
        public void IngresarBotónAgregarCarroProducto()
         {
             btnAgregarCarritoCompra.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            btnIrPagar.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            txtRutCliente.SendKeys("19887407-8");
+
+            System.Threading.Thread.Sleep(2000);
+
+            txtNombreCliente.SendKeys("Alex Eduardo");
+
+            System.Threading.Thread.Sleep(2000);
+
+            txtApellidosCliente.SendKeys("Moreno Gamboa");
+
+            System.Threading.Thread.Sleep(2000);
+
+            txtEmailCliente.SendKeys("amoreno@ingesmart.cl");
+
+            System.Threading.Thread.Sleep(2000);
+
+            txtCelularCliente.SendKeys("976526574");
+
+            System.Threading.Thread.Sleep(2000);
+
         }
-       
+
+        ///<summary>
+        /// Completar Sección Dirección
+        /// </summary>
+
+        public void completarDirección(string lugar, string direccion, string Region, string Comuna)
+        {
+            SelectElement selectValueRegion = new SelectElement(comboRegionDespacho);
+
+            SelectElement selectValueComuna = new SelectElement(comboComunaDespacho);
+
+            txtAliasDireccionCliente.SendKeys(lugar);
+
+            System.Threading.Thread.Sleep(2000);
+
+            txtDireccion.SendKeys(direccion);
+
+            System.Threading.Thread.Sleep(2000);
+
+            selectValueRegion.SelectByText(Region);
+
+            System.Threading.Thread.Sleep(2000);
+
+            selectValueComuna.SelectByText(Comuna);
+
+            System.Threading.Thread.Sleep(2000);
+
+            btnContinuar.Click();
+        }
+
 
 
         ///<summary>

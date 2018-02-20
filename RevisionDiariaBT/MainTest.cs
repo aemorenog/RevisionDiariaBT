@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sikuli4Net.sikuli_UTIL;
+using Sikuli4Net.sikuli_REST;
 
 namespace RevisionDiariaBT
 {
@@ -288,6 +290,20 @@ namespace RevisionDiariaBT
 
             IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
 
+            APILauncher launcher = new APILauncher(true);
+
+            Screen screen = new Screen();
+
+            Pattern patter_buttoncath = new Pattern("C:/Users/Administrator/Desktop/screen/buttoncath.PNG");
+
+            string lugar = "Casa";
+
+            string direccion = "Casa #213213 asdasd";
+
+            string region = "(XV) Región de Arica y Parinacota";
+
+            string comuna = "Arica";
+
             System.Threading.Thread.Sleep(3000);
 
             js.ExecuteScript("window.scrollBy(0,650);");
@@ -297,6 +313,16 @@ namespace RevisionDiariaBT
             paginaBT.IngresarBotónAgregarCarroProducto();
 
             System.Threading.Thread.Sleep(3000);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            paginaBT.completarDirección(lugar, direccion, region, comuna);
+
+            System.Threading.Thread.Sleep(3000);
+
+            screen.Click(patter_buttoncath);
 
             PropiedadColeccionDriver.driver.Quit();
         }
