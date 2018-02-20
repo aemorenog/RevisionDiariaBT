@@ -567,11 +567,15 @@ namespace RevisionDiariaBT
             selectValueComuna.SelectByText(Comuna);
 
             System.Threading.Thread.Sleep(2000);
-
-            btnContinuar.Click();
         }
 
-
+        ///<summary>
+        /// Pulsar botón Continuar
+        /// </summary>
+        public void IngresarBtnContinuar()
+        {
+            btnContinuar.Click();
+        }
 
         ///<summary>
         /// Utilizar botón Ingresar Viaje X

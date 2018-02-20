@@ -294,7 +294,7 @@ namespace RevisionDiariaBT
 
             Screen screen = new Screen();
 
-            Pattern patter_buttoncath = new Pattern("C:/Users/Administrator/Desktop/screen/buttoncath.PNG");
+            Pattern patter_buttoncath = new Pattern("C:/screen/buttoncath.PNG");
 
             string lugar = "Casa";
 
@@ -303,6 +303,10 @@ namespace RevisionDiariaBT
             string region = "(XV) Región de Arica y Parinacota";
 
             string comuna = "Arica";
+
+            System.Threading.Thread.Sleep(6000);
+
+            launcher.Start();
 
             System.Threading.Thread.Sleep(3000);
 
@@ -323,6 +327,12 @@ namespace RevisionDiariaBT
             System.Threading.Thread.Sleep(3000);
 
             screen.Click(patter_buttoncath);
+
+            System.Threading.Thread.Sleep(3000);
+
+            paginaBT.IngresarBtnContinuar();
+
+            System.Threading.Thread.Sleep(3000);
 
             PropiedadColeccionDriver.driver.Quit();
         }
