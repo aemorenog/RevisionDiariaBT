@@ -963,7 +963,7 @@ namespace RevisionDiariaBT
 
             PropiedadColeccionDriver.driver.Navigate().Back();
 
-            /// Producto 8
+            /// Producto 9
             /// 
 
             System.Threading.Thread.Sleep(400);
@@ -981,7 +981,6 @@ namespace RevisionDiariaBT
             System.Threading.Thread.Sleep(3000);
 
             PropiedadColeccionDriver.driver.Quit();
-
 
         }
 
@@ -1162,6 +1161,255 @@ namespace RevisionDiariaBT
             System.Threading.Thread.Sleep(3000);
 
             PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void WebHomeDescuentos_Validar_Funcionalidad_Categorias_Descuentos()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoDescuento paginaDescuentos = new ElementoWebMundoDescuento();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraDescuento();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,1900);");
+
+            System.Threading.Thread.Sleep(5000);
+
+            ///Categoria Restaurantes
+            ///
+            paginaDescuentos.IngresarCategoriaRestaurantes();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///Categoria Bienestar
+            ///
+
+            paginaDescuentos.IngresarCategoriaBienestar();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///Categoria Entretenimiento
+            ///
+
+            paginaDescuentos.IngresarCategoriaEntretencion();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///Categoria Servicios
+            ///
+
+            paginaDescuentos.IngresarCategoriaServicios();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            ///Categoria Educación
+            ///
+
+            paginaDescuentos.IngresarCategoriaEducacion();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            ///Categoria Compras
+            ///
+
+            paginaDescuentos.IngresarCategoriaCompras();
+
+            System.Threading.Thread.Sleep(2000);
+
+            js.ExecuteScript("window.scrollBy(0,365);");
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            System.Threading.Thread.Sleep(4000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+
+        [Test]
+        public void WebHomeDescuentos_Validar_Funcionalidad_Ingreso_Descuento_Destacados()
+        {
+            ElementoWebHomeBT paginaBT = new ElementoWebHomeBT();
+
+            ElementoWebMundoDescuento paginaDescuentos = new ElementoWebMundoDescuento();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            System.Threading.Thread.Sleep(2000);
+
+            paginaBT.IraDescuento();
+
+            System.Threading.Thread.Sleep(1000);
+
+            /// Producto 1
+
+            paginaDescuentos.IngresarDescuentoDestacado1();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 2
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarDescuentoDestacado2();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 3
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarDescuentoDestacado3();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 4
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarDescuentoDestacado4();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 5
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarDescuentoDestacado5();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 6
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarDescuentoDestacado6();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 7
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarDescuentoDestacado7();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 8
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarDescuentoDestacado8();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            /// Producto 9
+            /// 
+
+            System.Threading.Thread.Sleep(400);
+
+            paginaDescuentos.IngresarDescuentoDestacado9();
+
+            System.Threading.Thread.Sleep(2500);
+
+            js.ExecuteScript("window.scrollBy(0,650);");
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Navigate().Back();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Quit();
+
         }
 
     }

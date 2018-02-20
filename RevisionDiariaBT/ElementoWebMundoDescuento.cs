@@ -48,6 +48,59 @@ namespace RevisionDiariaBT
         [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/div[2]/div[2]/div/div/div/div/div/section[1]/div/article/div[1]/ol/li[4]/a")]
         public IWebElement BtnCarruselDescuento4 { get; set; }
 
+        /// <summary>
+        /// Descuentos Destacados del Mes
+        /// </summary>
+        [FindsBy(How = How.XPath, Using = "")]
+        public IWebElement DescuentoDestacado1 { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "")]
+        public IWebElement DescuentoDestacado2 { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "")]
+        public IWebElement DescuentoDestacado3 { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "")]
+        public IWebElement DescuentoDestacado4 { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "")]
+        public IWebElement DescuentoDestacado5 { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "")]
+        public IWebElement DescuentoDestacado6 { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "")]
+        public IWebElement DescuentoDestacado7 { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "")]
+        public IWebElement DescuentoDestacado8 { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "")]
+        public IWebElement DescuentoDestacado9 { get; set; }
+
+        ///<summary>
+        /// Categorias de descuentos
+        /// </summary>
+
+        [FindsBy(How = How.LinkText, Using = "Restaurantes")]
+        public IWebElement CategoriaDescuentoRestaurantes { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Bienestar")]
+        public IWebElement CategoriaDescuentoBienestar { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Entretención")]
+        public IWebElement CategoriaDescuentoEntretención { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Servicios")]
+        public IWebElement CategoriaDescuentoServicios { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Educación")]
+        public IWebElement CategoriaDescuentoEducación { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Compras")]
+        public IWebElement CategoriaDescuentoCompras { get; set; }
+
+
 
         /// <summary>
         /// Métodos para ingresar imagenes del carrusel
@@ -95,6 +148,90 @@ namespace RevisionDiariaBT
         public void IngresarBtnCarrusel4()
         {
             BtnCarruselDescuento4.Click();
+        }
+
+        ///<summary>
+        /// Métodos para ingresar Categorias Mundo Descuento
+        /// </summary>
+        /// 
+
+        public void IngresarCategoriaRestaurantes()
+        {
+            CategoriaDescuentoRestaurantes.Click();
+        }
+
+        public void IngresarCategoriaBienestar()
+        {
+            CategoriaDescuentoBienestar.Click();
+        }
+
+        public void IngresarCategoriaEntretencion()
+        {
+            CategoriaDescuentoEntretención.Click();
+        }
+
+        public void IngresarCategoriaServicios()
+        {
+            CategoriaDescuentoServicios.Click();
+        }
+
+        public void IngresarCategoriaEducacion()
+        {
+            CategoriaDescuentoEducación.Click();
+        }
+
+        public void IngresarCategoriaCompras()
+        {
+            CategoriaDescuentoCompras.Click();
+        }
+
+        ///<summary>
+        /// Métodos para ingresar a los descuentos destacados del mes
+        /// </summary>
+
+        public void IngresarDescuentoDestacado1()
+        {
+            DescuentoDestacado1.Click();
+        }
+
+        public void IngresarDescuentoDestacado2()
+        {
+            DescuentoDestacado2.Click();
+        }
+
+        public void IngresarDescuentoDestacado3()
+        {
+            DescuentoDestacado3.Click();
+        }
+
+        public void IngresarDescuentoDestacado4()
+        {
+            DescuentoDestacado4.Click();
+        }
+
+        public void IngresarDescuentoDestacado5()
+        {
+            DescuentoDestacado5.Click();
+        }
+
+        public void IngresarDescuentoDestacado6()
+        {
+            DescuentoDestacado6.Click();
+        }
+
+        public void IngresarDescuentoDestacado7()
+        {
+            DescuentoDestacado7.Click();
+        }
+
+        public void IngresarDescuentoDestacado8()
+        {
+            DescuentoDestacado8.Click();
+        }
+
+        public void IngresarDescuentoDestacado9()
+        {
+            DescuentoDestacado9.Click();
         }
     }
 }
