@@ -294,7 +294,7 @@ namespace RevisionDiariaBT
 
             Screen screen = new Screen();
 
-            Pattern patter_buttoncath = new Pattern("C:/screen/buttoncath.PNG");
+            Pattern patter_buttoncath = new Pattern("C:/Users/amoreno/Desktop/screen/buttoncath.PNG");
 
             string lugar = "Casa";
 
@@ -305,8 +305,6 @@ namespace RevisionDiariaBT
             string comuna = "Arica";
 
             System.Threading.Thread.Sleep(6000);
-
-            launcher.Start();
 
             System.Threading.Thread.Sleep(3000);
 
@@ -326,13 +324,27 @@ namespace RevisionDiariaBT
 
             System.Threading.Thread.Sleep(3000);
 
-            screen.Click(patter_buttoncath);
+            try
+            {
+                launcher.Start();
 
-            System.Threading.Thread.Sleep(3000);
+                screen.Click(patter_buttoncath);
 
-            paginaBT.IngresarBtnContinuar();
+                System.Threading.Thread.Sleep(3000);
 
-            System.Threading.Thread.Sleep(3000);
+                paginaBT.IngresarBtnContinuar();
+
+                System.Threading.Thread.Sleep(3000);
+
+                launcher.Stop();
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+
 
             PropiedadColeccionDriver.driver.Quit();
         }

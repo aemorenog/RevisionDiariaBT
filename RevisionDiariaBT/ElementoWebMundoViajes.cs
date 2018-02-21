@@ -57,7 +57,7 @@ namespace RevisionDiariaBT
         /// Descubre Las Ofertas destacadas de esta semana
         /// </summary>
 
-        [FindsBy(How = How.XPath, Using = "")]
+        [FindsBy(How = How.ClassName, Using = "mat-pro-img")]
         public IWebElement ViajeDestacadoSemana1 { get; set; }
 
         [FindsBy(How = How.XPath, Using = "")]
@@ -344,6 +344,8 @@ namespace RevisionDiariaBT
         {
             ViajesCategoriaEuropayLejanos.Click();
         }
+
+        ///
     }
 
 }
